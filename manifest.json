@@ -1,0 +1,23 @@
+{
+    "name": "Tweets to Photos",
+    "description": "Save Tweets to Photos",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions":["contextMenus","tabs","storage","scripting"],
+    "background": {
+    "service_worker": "background.js"
+  },
+    "action":{
+        "default_popup":"popup.html"
+    },
+    "icons":{
+      "16":"/images/save-tweet-18.png",
+      "32":"/images/save_tweet-36.png",
+      "48":"/images/save_tweet-50.png",
+      "128":"/images/save_tweet-100.png"
+    },
+    "content_scripts":[{
+      "matches":["<all_urls>"],
+      "js":["content.js"]
+      }]
+  }
